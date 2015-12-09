@@ -1,0 +1,184 @@
+$primary-color-regular: #2980b9
+$primary-color-hover: #20638f
+$font-stack: 'Playfair', 'Arial', sans-serif
+
+@font-face
+  font-family: 'Playfair'
+  src: url('vendor/fonts/playfairdisplay.eot')
+  src: url('vendor/fonts/playfairdisplay.eot?#iefix') format("embedded-opentype"), url('vendor/fonts/playfair/playfairdisplay.woff2') format("woff2"), url('vendor/fonts/playfair/playfairdisplay.woff') format("woff"), url('vendor/fonts/playfair/playfairdisplay.ttf') format("truetype"), url('vendor/fonts/playfair/playfairdisplay.svg#playfair_displayregular') format("svg")
+  font-weight: normal
+  font-style: normal
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  text-rendering: optimizeLegibility
+
+html
+  background-color: #fff
+  color: #555
+  font-family: $font-stack
+  font-size: 20px
+  font-weight: 300
+
+.row
+  max-width: 1140px
+  margin: 0 auto
+
+section
+  padding: 80px 0
+  margin-bottom: 50px
+
+.box
+  padding: 1%
+  p
+    font-size: 90%
+    line-height: 145%
+
+// Header
+
+header
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/laptop.jpg')
+  height: 100vh
+  background-size: cover
+  background-position: center
+
+.title
+  position: absolute
+  width: 1140px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.main-nav
+  margin-top: 50px
+  float: right
+  list-style: none
+  li
+    display: inline-block
+    margin-left: 40px
+    a
+      &:link, &:visited
+        color: #fff
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 90%
+        font-weight: 300
+        letter-spacing: 1px
+        word-spacing: 4px
+        border-bottom: 2px solid transparent
+        transition: border-bottom 0.2s
+        padding: 8px 0px
+      &:hover, &:active
+        padding: 8px 0px
+        border-bottom: 2px solid $primary-color-regular
+
+h1,
+h2,
+h3
+  font-weight: 300
+  text-transform: uppercase
+
+h1
+  margin-top: 0
+  margin-bottom: 20px
+  color: #fff
+  font-size: 240%
+  word-spacing: 4px
+  letter-spacing: 1px
+
+h2
+  font-size: 180%
+  word-spacing: 2px
+  text-align: center
+  margin-bottom: 30px
+  letter-spacing: 1px
+  &::after
+    display: block
+    height: 2px
+    background-color: $primary-color-regular
+    content: " "
+    width: 100px
+    margin: 0 auto
+    margin-top: 30px
+
+h3
+  font-size: 110%
+  margin-bottom: 15px
+
+// Paragraphs
+
+.long-copy
+  line-height: 145%
+  width: 70%
+  margin-left: 15%
+
+// Icons
+.icon-big
+  font-size: 350%
+  display: block
+  color: $primary-color-regular
+  margin-bottom: 10px
+
+
+// Buttons
+
+.btn
+  &:link, &:visited
+    display: inline-block
+    padding: 10px 30px
+    font-weight: 300
+    text-decoration: none
+    border-radius: 5px
+    transition: background-color 0.2s, border 0.2s, color 0.2s
+
+.btn-full
+  &:link, &:visited
+    color: #fff
+    background-color: $primary-color-regular
+    border: 1px solid $primary-color-regular
+
+.btn-ghost
+  &:link, &:visited
+    color: $primary-color-regular
+    border: 1px solid $primary-color-regular
+
+.btn
+  &:hover, &:active
+    background-color: $primary-color-hover
+
+.btn-full
+  &:hover, &:active
+    border: 1px solid $primary-color-hover
+
+.btn-ghost
+  &:hover, &:active
+    color: #fff
+
+
+// Testimonials section
+
+.section-testimonials
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/customers.jpg')
+  background-size: cover
+  color: #fff
+  background-attachment: fixed
+
+blockquote
+  padding: 2%
+  font-style: italic
+  line-height: 145%normal
+  position: relative
+  &::before
+    content: "\201C"
+    font-size: 400%
+    display: block
+    position: absolute
+    top: -40px
+    left: -30px
+
+cite
+  font-size: 90%
+  margin-top: 25px
+  display: block
