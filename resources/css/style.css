@@ -35,6 +35,7 @@ section {
   line-height: 145%;
 }
 header {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/laptop.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/laptop.jpg");
   height: 100vh;
   background-size: cover;
@@ -45,8 +46,12 @@ header {
   width: 1140px;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+/* Main Navigation */
+
 .main-nav {
   margin-top: 50px;
   float: right;
@@ -65,6 +70,7 @@ header {
   letter-spacing: 1px;
   word-spacing: 4px;
   border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
   transition: border-bottom 0.2s;
   padding: 8px 0px;
 }
@@ -72,6 +78,27 @@ header {
   padding: 8px 0px;
   border-bottom: 2px solid #2980b9;
 }
+
+/* Sticky Navigation */
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.main-nav {
+  margin-top: 18px;
+  height: 40px;
+}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+  color: #555;
+  padding: 10px 0px;
+}
+
 h1, h2, h3 {
   font-weight: 300;
   text-transform: uppercase;
@@ -121,6 +148,7 @@ h3 {
   font-weight: 300;
   text-decoration: none;
   border-radius: 5px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 .btn-full-style, input[type=submit], .btn-full:link, .btn-full:visited {
@@ -146,6 +174,7 @@ input[type=submit]:hover, input[type=submit]:active {
   color: #fff;
 }
 .section-testimonials {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/customers.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/customers.jpg");
   background-size: cover;
   color: #fff;
@@ -154,7 +183,7 @@ input[type=submit]:hover, input[type=submit]:active {
 blockquote {
   padding: 2%;
   font-style: italic;
-  line-height: 145% normal;
+  line-height: 145%;
   position: relative;
 }
 blockquote::before {
@@ -194,6 +223,7 @@ footer a:link, footer a:visited {
   color: #888;
   text-decoration: none;
   border: 0;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 footer a:hover, footer a:active {
@@ -211,6 +241,7 @@ footer a:hover, footer a:active {
   font-size: 150%;
 }
 .ion-social-facebook, .ion-social-linkedin {
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 .ion-social-facebook:hover {
@@ -226,5 +257,3 @@ footer a:hover, footer a:active {
 .footer-nav li:last-child, .social-links li:last-child {
   margin-right: 0;
 }
-
-/*# sourceMappingURL=style.css.map */
